@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import { CustomerReviews } from "@/components/customer-reviews";
+import { Contact } from "@/components/contact-form";
 import {
   HowItWorks,
   Brands,
@@ -9,7 +10,6 @@ import {
   WhyUs,
   RouteHighlight,
   FAQ,
-  Contact,
   Footer
 } from "@/components/placeholders";
 
