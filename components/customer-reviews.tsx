@@ -14,10 +14,11 @@ export function CustomerReviews() {
   };
 
   const reviews = [
-    { name: "Hassan Saeed", date: "Jul 23, 2024", car: "Suzuki ALTO", text: "Really easy to use and helped me get my dream vehicle in less than 2 Months. They also helped me with the clearance process. Very impressed by the team." },
-    { name: "Usman Ali", date: "Jul 16, 2024", car: "Nissan NOTE", text: "Very beautiful blue colour! When I first saw my Nissan Note after arrival, I was really excited. The front design looks sporty and the paint still has good shine. Inside is comfortable, steering is light and it drives smoothly." },
-    { name: "Tariq M.", date: "Jul 10, 2024", car: "Toyota PROBOX VAN", text: "My Toyota Probox has arrived and already doing its job. I wanted simple car, strong enough for daily work and not costly to maintain. This one is exactly that type. It starts easily, drives stable and has very spacious trunk." },
-    { name: "Ali Khan", date: "Jun 28, 2024", car: "Toyota AQUA", text: "The hybrid system is perfect for fuel savings. Faizan Traders ensured the auction sheet was 100% authentic. Smooth delivery to Karachi. I will definitely be using their services again for my next vehicle import." }
+    { name: "Ahmed Al Maktoum", countryCode: "ae", date: "Aug 12, 2024", car: "Nissan Patrol", text: "Importing to Dubai was seamless. The vehicle arrived in perfect condition, exactly as described on the auction sheet. Highly recommended." },
+    { name: "John Smith", countryCode: "gb", date: "Jul 23, 2024", car: "Toyota RAV4", text: "Really easy to use and helped me get my dream vehicle in less than 2 Months to the UK. Very impressed by the team." },
+    { name: "David Omondi", countryCode: "ke", date: "Jul 16, 2024", car: "Subaru Forester", text: "Very beautiful color! When I first saw my Forester after arrival in Mombasa, I was really excited. Drives smoothly and strong." },
+    { name: "Sarah Jenkins", countryCode: "au", date: "Jun 28, 2024", car: "Mazda CX-5", text: "Faizan Traders ensured the auction sheet was 100% authentic. Smooth delivery to Sydney. I will definitely be using their services again." },
+    { name: "Hassan Saeed", countryCode: "pk", date: "Jun 10, 2024", car: "Suzuki ALTO", text: "They helped me with the local clearance process in Karachi. Very professional and reliable for direct imports from Japan." }
   ];
 
   return (
@@ -50,8 +51,8 @@ export function CustomerReviews() {
                   <div className="flex items-center gap-1 text-amber-400">
                     {[1,2,3,4,5].map(star => <Star key={star} className="w-5 h-5 fill-current" />)}
                   </div>
-                  {/* Pakistan Flag */}
-                  <img src="https://flagcdn.com/w40/pk.png" alt="Pakistan Flag" className="h-4 object-contain shadow-sm border border-zinc-200" />
+                  {/* Dynamic Country Flag */}
+                  <img src={`https://flagcdn.com/w40/${rev.countryCode}.png`} alt={`${rev.countryCode} Flag`} className="h-4 object-contain shadow-sm border border-zinc-200" />
                 </div>
                 
                 <h3 className="font-bold text-zinc-900 dark:text-white mb-4 text-sm">{rev.car}</h3>
@@ -65,7 +66,7 @@ export function CustomerReviews() {
                     <div className="font-medium text-sm text-zinc-900 dark:text-white">{rev.name}</div>
                     <div className="text-xs text-zinc-500 mt-1">{rev.date}</div>
                   </div>
-                  <button className="text-sm font-bold flex items-center gap-1 text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">
+                  <button className="text-sm font-bold flex items-center gap-1 text-zinc-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
                     See Full Review <ArrowRight className="h-4 w-4" />
                   </button>
                 </div>

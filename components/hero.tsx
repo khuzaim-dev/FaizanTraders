@@ -35,13 +35,16 @@ export default function Hero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="absolute right-4 top-12 hidden lg:block"
+          className="absolute right-4 top-12 hidden lg:flex flex-wrap w-48 justify-center gap-2"
         >
-          <img 
-            src="https://img.magnific.com/free-photo/flag-pakistan_1401-192.jpg?semt=ais_hybrid&w=740&q=80" 
-            alt="Pakistan Flag" 
-            className="h-20 w-32 object-cover rounded-lg shadow-md border border-zinc-200 dark:border-zinc-800 rotate-[6deg]" 
-          />
+          {['ae', 'gb', 'au', 'ke', 'us', 'pk', 'in'].map((country) => (
+            <img 
+              key={country}
+              src={`https://flagcdn.com/w80/${country}.png`}
+              alt={`${country.toUpperCase()} Flag`} 
+              className="h-10 w-14 object-cover rounded shadow-sm border border-zinc-200 dark:border-zinc-800" 
+            />
+          ))}
         </motion.div>
 
         <motion.div
@@ -52,17 +55,17 @@ export default function Hero() {
         >
           <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-white">
             Import Your Dream Car — <br className="hidden sm:block" />
-            <span className="text-red-600 dark:text-red-500">Direct from Japan </span>
-            to <span className="text-emerald-600 dark:text-emerald-500">Pakistan</span>
+            <span className="text-blue-600 dark:text-blue-500">Direct from Japan </span>
+            to <span className="text-blue-600 dark:text-blue-500">Worldwide</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-            We source top-quality JDM vehicles, rigorously verify all auction sheets, and handle direct sea freight from Japan to Port Qasim, Karachi.
+            We source top-quality JDM vehicles, rigorously verify all auction sheets, and handle direct sea freight from Japan to global ports worldwide.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="#fleet"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-red-600 px-8 py-3 text-base font-medium text-white shadow transition-colors hover:bg-red-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-8 py-3 text-base font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50"
             >
               Browse Fleet
             </Link>
@@ -83,7 +86,7 @@ export default function Hero() {
           className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3 border-t pt-8 dark:border-zinc-800"
         >
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600 dark:bg-red-900/20 dark:text-red-500">
+            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/20 dark:text-blue-500">
               <ShieldCheck className="h-6 w-6" />
             </div>
             <h3 className="text-base font-semibold text-zinc-900 dark:text-white">100% Document Verified</h3>
@@ -93,14 +96,14 @@ export default function Hero() {
             <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/20 dark:text-blue-500">
               <Anchor className="h-6 w-6" />
             </div>
-            <h3 className="text-base font-semibold text-zinc-900 dark:text-white">Japan → Karachi Sea Freight</h3>
-            <p className="mt-1 text-sm text-zinc-500">Secure & timely shipping</p>
+            <h3 className="text-base font-semibold text-zinc-900 dark:text-white">Global Sea Freight</h3>
+            <p className="mt-1 text-sm text-zinc-500">Secure & timely worldwide shipping</p>
           </div>
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-500">
+            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-amber-100 text-amber-600 dark:bg-amber-900/20 dark:text-amber-500">
               <MapPin className="h-6 w-6" />
             </div>
-            <h3 className="text-base font-semibold text-zinc-900 dark:text-white">Trusted in Pakistan</h3>
+            <h3 className="text-base font-semibold text-zinc-900 dark:text-white">Trusted Worldwide</h3>
             <p className="mt-1 text-sm text-zinc-500">500+ Cars successfully delivered</p>
           </div>
         </motion.div>

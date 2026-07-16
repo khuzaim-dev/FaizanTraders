@@ -10,9 +10,9 @@ export function HowItWorks() {
     { title: "Sourcing in Japan", desc: "We locate high-quality vehicles in auctions or direct sellers across Japan.", icon: <MapPin className="h-6 w-6" /> },
     { title: "Document Verification", desc: "Rigorous check of auction sheets and export certificates to ensure authenticity.", icon: <ShieldCheck className="h-6 w-6" /> },
     { title: "Purchase & Loading", desc: "Vehicle is secured and loaded onto a RoRo vessel for sea freight.", icon: <Anchor className="h-6 w-6" /> },
-    { title: "Arrival in Karachi", desc: "Vessel arrives at Port Qasim, Karachi. We manage local clearance.", icon: <MapPin className="h-6 w-6 text-emerald-600 dark:text-emerald-500" /> },
+    { title: "Arrival in global ports", desc: "Vessel arrives at your port, global ports. We manage local clearance.", icon: <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-500" /> },
     { title: "Customs Clearance", desc: "We facilitate transparent duty payments and necessary paperwork.", icon: <FileText className="h-6 w-6" /> },
-    { title: "Safe Delivery", desc: "Your dream car is delivered directly to you anywhere in Pakistan.", icon: <Truck className="h-6 w-6" /> },
+    { title: "Safe Delivery", desc: "Your dream car is delivered directly to you anywhere in your country.", icon: <Truck className="h-6 w-6" /> },
   ];
 
   return (
@@ -20,11 +20,11 @@ export function HowItWorks() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">How It Works</h2>
-          <p className="mt-4 text-zinc-600 dark:text-zinc-400">Your seamless journey from Japan to Pakistan.</p>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400">Your seamless journey from Japan to your country.</p>
         </div>
         
         <div className="mt-12 relative">
-          <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-red-200 to-emerald-200 dark:from-red-900 dark:to-emerald-900 -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-red-200 to-blue-200 dark:from-red-900 dark:to-blue-900 -translate-y-1/2 hidden lg:block"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {steps.map((step, idx) => (
@@ -68,15 +68,15 @@ export function Brands() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
           {brands.map(brand => (
-            <Link href={`/browse/cars?make=${brand.name}`} key={brand.name} className="flex flex-col items-center justify-center p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 hover:shadow-md dark:hover:border-emerald-500 transition-all group">
+            <Link href={`/browse/cars?make=${brand.name}`} key={brand.name} className="flex flex-col items-center justify-center p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 transition-all">
               <div className="h-12 w-12 flex items-center justify-center mb-3">
                 <img 
                   src={brand.url} 
                   alt={`${brand.name} logo`}
-                  className="max-h-full max-w-full object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="font-semibold text-sm text-zinc-700 dark:text-zinc-300 group-hover:text-emerald-600 transition-colors">{brand.name}</span>
+              <span className="font-semibold text-sm text-zinc-700 dark:text-zinc-300">{brand.name}</span>
             </Link>
           ))}
         </div>
@@ -95,9 +95,9 @@ export function Fleet() {
         <div className="flex justify-between items-end mb-8">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">Featured Fleet</h2>
-            <p className="mt-2 text-zinc-600 dark:text-zinc-400">Browse a selection of vehicles ready for export to Pakistan.</p>
+            <p className="mt-2 text-zinc-600 dark:text-zinc-400">Browse a selection of vehicles ready for export to your country.</p>
           </div>
-          <Link href="/browse/cars" className="hidden sm:inline-flex text-emerald-600 dark:text-emerald-500 font-medium hover:underline">
+          <Link href="/browse/cars" className="hidden sm:inline-flex text-blue-600 dark:text-blue-500 font-medium hover:underline">
             View All Cars &rarr;
           </Link>
         </div>
@@ -131,7 +131,7 @@ export function Fleet() {
                     href={`https://wa.me/818065174039?text=Hi, I'm interested in importing the ${car.year} ${car.make} ${car.model} (Grade: ${car.auctionGrade}). Please provide more details.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 text-sm font-semibold px-4 py-2.5 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors"
+                    className="w-full flex items-center justify-center gap-2 text-sm font-semibold px-4 py-2.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                   >
                     <Phone className="h-4 w-4" />
                     Contact About This Car
@@ -141,7 +141,7 @@ export function Fleet() {
             </div>
           ))}
         </div>
-        <div className="mt-12 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800/50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="mt-12 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div>
             <h3 className="text-xl font-bold text-zinc-900 dark:text-white">Looking for a specific car?</h3>
             <p className="mt-2 text-zinc-600 dark:text-zinc-400 max-w-2xl">If you need a specific model, make, or custom specifications that aren't listed in our current inventory, simply send us a message and we will source it directly from the Japanese auctions for you.</p>
@@ -150,14 +150,14 @@ export function Fleet() {
             href="https://wa.me/818065174039?text=Hi, I am looking for a specific car model that is not listed in your inventory. Can you help me source it?"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-colors w-full md:w-auto justify-center"
+            className="shrink-0 flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors w-full md:w-auto justify-center"
           >
             <Phone className="h-5 w-5" />
             Message Request
           </a>
         </div>
         <div className="mt-8 text-center sm:hidden">
-          <Link href="/browse/cars" className="text-emerald-600 dark:text-emerald-500 font-medium hover:underline">
+          <Link href="/browse/cars" className="text-blue-600 dark:text-blue-500 font-medium hover:underline">
             View All Cars &rarr;
           </Link>
         </div>
@@ -170,8 +170,8 @@ export function Services() {
   const services = [
     { title: "Auction Sheet Verification", desc: "We translate and verify auction sheets to guarantee the true condition and grade of the vehicle." },
     { title: "Secure Transactions", desc: "Transparent financial processes ensuring your funds are safe throughout the import process." },
-    { title: "Customs Clearance Support", desc: "Expert guidance on Pakistan's import duties, taxes, and port clearance procedures." },
-    { title: "Shipment Tracking", desc: "Real-time updates on your vehicle's sea freight journey from Japan to Karachi." }
+    { title: "Customs Clearance Support", desc: "Expert guidance on your country's import duties, taxes, and port clearance procedures." },
+    { title: "Shipment Tracking", desc: "Real-time updates on your vehicle's sea freight journey from Japan to global ports." }
   ];
 
   return (
@@ -183,7 +183,7 @@ export function Services() {
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((svc, i) => (
              <div key={i} className="flex flex-col items-center p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-700">
-               <div className="h-12 w-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 dark:bg-emerald-900/30 dark:text-emerald-400">
+               <div className="h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 dark:bg-blue-900/30 dark:text-blue-400">
                  <CheckCircle2 className="h-6 w-6" />
                </div>
                <h3 className="font-semibold text-zinc-900 dark:text-white">{svc.title}</h3>
@@ -199,7 +199,7 @@ export function Services() {
 export function WhyUs() {
   const reasons = [
     { title: "Direct from Japan", desc: "No middlemen. We buy directly from Japanese auctions and dealers to get you the best price." },
-    { title: "Transparent Pricing", desc: "We break down all costs including freight and estimated customs duties in Pakistan so there are no surprises." },
+    { title: "Transparent Pricing", desc: "We break down all costs including freight and estimated customs duties in your country so there are no surprises." },
     { title: "Condition Guarantee", desc: "What you see is what you get. Our pre-purchase inspections ensure the car matches the auction sheet perfectly." }
   ];
 
@@ -233,7 +233,7 @@ export function RouteHighlight() {
           </div>
           <div className="flex-1 flex items-center justify-center w-full px-4">
             <div className="h-px bg-zinc-700 flex-1"></div>
-            <div className="px-4 text-emerald-500 flex flex-col items-center">
+            <div className="px-4 text-blue-500 flex flex-col items-center">
               <Anchor className="w-6 h-6 mb-1" />
               <span className="text-xs uppercase tracking-widest font-semibold">Sea Freight</span>
             </div>
@@ -241,8 +241,8 @@ export function RouteHighlight() {
           </div>
           <div className="flex flex-col items-center">
             <span className="text-4xl">🇵🇰</span>
-            <span className="text-white font-bold mt-2">Port Qasim / KHI</span>
-            <span className="text-zinc-400 text-sm">Pakistan</span>
+            <span className="text-white font-bold mt-2">your port / KHI</span>
+            <span className="text-zinc-400 text-sm">your country</span>
           </div>
         </div>
       </div>
@@ -253,9 +253,9 @@ export function RouteHighlight() {
 export function FAQ() {
   const faqs = [
     { q: "What is an auction sheet and why is it important?", a: "An auction sheet is a document created by independent Japanese inspectors detailing a car's exact condition, mileage, and repair history. We verify this sheet to ensure you get exactly what you pay for." },
-    { q: "How long does shipping from Japan to Karachi take?", a: "Sea freight from Japan to Port Qasim, Karachi typically takes between 15 to 25 days depending on the shipping line and weather conditions." },
-    { q: "Who handles the customs clearance in Pakistan?", a: "We have trusted clearing agents in Karachi who handle all the paperwork and ensure the correct duty is paid according to Pakistani customs regulations." },
-    { q: "Can I import a car older than 3 years?", a: "Under Pakistan's current import policy, you can only import cars up to 3 years old, and SUVs/Jeeps up to 5 years old. We ensure all cars sourced comply with these regulations." }
+    { q: "How long does shipping from Japan to global ports take?", a: "Sea freight from Japan to your port, global ports typically takes between 15 to 25 days depending on the shipping line and weather conditions." },
+    { q: "Who handles the customs clearance in your country?", a: "We have trusted clearing agents in global ports who handle all the paperwork and ensure the correct duty is paid according to your countryi customs regulations." },
+    { q: "Can I import a car older than 3 years?", a: "Under your country's current import policy, you can only import cars up to 3 years old, and SUVs/Jeeps up to 5 years old. We ensure all cars sourced comply with these regulations." }
   ];
 
   return (
@@ -289,9 +289,9 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-white text-xl font-bold mb-4 tracking-tight">
-              <span className="text-red-500">Faizan</span><span className="text-emerald-500">Traders</span>
+              <span className="text-blue-500">Faizan</span><span className="text-white">Traders</span>
             </h3>
-            <p className="text-sm">Importing your dream car direct from Japan to Pakistan.</p>
+            <p className="text-sm">Importing your dream car direct from Japan to your country.</p>
           </div>
           <div className="lg:col-span-2">
             <h4 className="text-white font-semibold mb-4">Japan HQ</h4>
