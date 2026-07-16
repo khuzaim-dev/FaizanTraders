@@ -317,7 +317,7 @@ export function Contact() {
           </div>
 
           <div className="p-10 lg:w-1/2 bg-white dark:bg-zinc-900">
-            <form name="contact" method="POST" data-netlify="true" className="space-y-4">
+            <form name="contact" method="POST" className="space-y-4">
               <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">Your Name</label>
